@@ -62,7 +62,8 @@
     height: 65px;
     background-color: bisque;
     border-radius: 100px;
-    margin-right: 20px
+    margin-right: 20px;
+    object-fit: cover;
 }
 
 .box-user-text h5 {
@@ -88,11 +89,13 @@
 .img-item-one {
     width: 160px;
     height: 65px;
+    object-fit: cover;
 }
 
 .img-item-two {
     width: 65px;
     height: 65px;
+    object-fit: cover;
 }
 
 .typo-chefz h3 {

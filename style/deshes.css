@@ -69,6 +69,7 @@
 .box-top img {
     width: 350px;
     height: 260px;
+    object-fit: cover;
 }
 
 .box-bottom {
