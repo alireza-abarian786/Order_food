@@ -1,0 +1,396 @@
+.typo-recipes {
+    position: relative;
+}
+
+.typo-recipes h3 {
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 11px;
+    position: absolute;
+    top: 31px;
+    right: -10px;
+    left: 1px;
+
+}
+
+.recipes {
+    width: 1110px;
+    height: 715px;
+    margin: 180px auto 130px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.typo-two-recipes {
+    width: 1110px;
+    height: 240px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* ------------------------------------------------------- */
+.box-1 {
+    width: 540px;
+    height: 510px;
+    border-radius: 5px;
+    background-image: url(../images/de49247e57416fbb498a0ce9b4d4ee88.png), linear-gradient(rgb(97, 97, 97), rgb(97, 97, 97));
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 75px;
+    background-position-x: -112px;
+    background-blend-mode: overlay;
+    position: relative;
+}
+
+.box-2 {
+    height: 510px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item {
+    border-radius: 5px;
+    width: 540px;
+    height: 150px;
+    background-color: #252525;
+
+}
+
+.item {
+    padding: 30px;
+}
+
+.cantain-text {
+    margin-bottom: 10px;
+}
+
+.cantain-text p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.cantain-footer-left {
+    display: flex;
+    justify-content: space-between;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.date p {
+    font-size: 10px;
+    background-color: #00000057;
+    padding: 7px 15px;
+    border-radius: 5px;
+}
+
+.date span {
+    font-size: 12px;
+    color: #B3B3B3;
+}
+
+.cantain-footer-right {
+    display: flex;
+    gap: 30px;
+}
+
+.number {
+    font-size: 12px;
+    color: #D8D8D8;
+}
+
+.eye {
+    display: flex;
+    align-items: center;
+}
+
+.eye span i {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.item-2 {
+    background-image: url(../images/363783d93044b3ec910a28d03b626b6f.png), linear-gradient(rgb(189, 189, 189), rgb(189, 189, 189));
+    background-size: cover;
+    background-position-y: -105px;
+    background-blend-mode: overlay;
+}
+
+.item-3 {
+    background-color: #34C759;
+    color: #000;
+}
+
+.date-item3 p {
+    background-color: #000;
+    color: #fff;
+}
+
+.date-item3 span {
+    color: #000;
+}
+
+.number-item3 {
+    font-size: 12px;
+}
+
+
+
+
+.content-recipes {
+    display: flex;
+    justify-content: space-between;
+    width: 1110px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+
+
+
+.g {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.toop {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+    width: 359px;
+    height: 300px;
+}
+
+.icon-svg-2 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 6%;
+    right: 6%;
+    background-color: #00000045;
+    border-radius: 100px;
+    padding: 10px;
+}
+
+.toop div {
+    margin-bottom: 59px;
+}
+
+.toop p {
+    margin-bottom: 60px;
+    background-color: #00000061;
+    font-size: 10px;
+    padding: 6px 23px;
+    display: inline;
+    border-radius: 5px;
+}
+
+.toop h6 {
+    margin: 50px auto 60px auto;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.tarikh {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.down {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* ------------------------------------------------------ */
+
+@media screen and (max-width:1200px) {
+    .content-recipes {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .content-recipes {
+        width: auto;
+        justify-content: center;
+    }
+
+    .typo-recipes h3 {
+        font-size: 27px;
+        top: 27px;
+    }
+
+    .recipes {
+        height: 1220px;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .content-recipes {
+        max-width: 730px;
+        margin: 0 auto;
+    }
+
+    .recipes {
+        width: 730px;
+    }
+
+    .typo-two-recipes {
+        width: 730px;
+    }
+
+    .content-recipes {
+        width: auto;
+        justify-content: center;
+    }
+
+    .typo-recipes h3 {
+        font-size: 27px;
+        top: 27px;
+    }
+
+    .recipes {
+        height: 1220px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .content-recipes {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .recipes {
+        width: 600px;
+        gap: 0;
+    }
+
+    .typo-two-recipes {
+        width: 600px;
+    }
+
+    .content-recipes {
+        width: auto;
+        justify-content: center;
+    }
+
+    .typo-recipes h3 {
+        font-size: 27px;
+        top: 27px;
+    }
+
+    .recipes {
+        height: 1300px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .content-recipes {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .recipes {
+        width: 100%;
+        gap: 0;
+        margin: 120px auto 0 auto;
+    }
+
+    .typo-two-recipes {
+        width: 100%;
+        height: 120px;
+    }
+
+    .content-recipes {
+        width: auto;
+        justify-content: center;
+    }
+
+    .typo-two-item h2 {
+        letter-spacing: 10px;
+    }
+
+    .typo-recipes h3 {
+        font-size: 10px;
+        top: 20px;
+        letter-spacing: 8px;
+    }
+
+    .recipes {
+        height: 1172px;
+    }
+
+    .box-1 {
+        max-width: 100%;
+    }
+
+    .toop {
+        max-width: 100%;
+    }
+
+    .toop h6 {
+        font-size: 20px;
+    }
+
+    .icon-svg-2 {
+        width: 30px;
+        height: 30px;
+    }
+
+    .item {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .item-2{
+        background-position-y: -50px;
+    }
+
+    .cantain-text p {
+        font-size: 10px;
+        line-height: 25px;
+    }
+
+    .date p {
+        font-size: 8px;
+    }
+
+    .date span {
+        font-size: 10px;
+    }
+
+    .number {
+        font-size: 10px;
+    }
+
+    .eye span i {
+        font-size: 15px;
+        margin-right: 10px;
+    }
+
+    .cantain-footer-right {
+        gap: 15px;
+    }
+}
