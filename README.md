@@ -11,11 +11,11 @@
 ## What sections does the site include?
 
 1: The first part is the head of the site, which includes ⚜️
-- Ⓜ️ logo
+- Ⓜ logo
 - 📋 menu
-- 🖲️ order registration key
-- 🕰️ working hours
-- ☎️ ways to contact us
+- 📣 The motto of the collection
+- 📚 Quick access to the collection menu
+- 📞 Ways of communication
 
 2: The second part is explanations about healthy food and principles of eating 🍜
 
@@ -26,6 +26,15 @@
 5: The fifth section contains information about chefs and their portfolios 👨‍🍳
 
 6: This section provides you with recipes for cooking a variety of dishes served by the chefs of the collection 🫕
+
+7: The seventh section includes the collection's social networks in virtual space, through which you can stay in touch with the collection 📲
+
+8: And at the end of the footer of the site, which contains content for easier access 🚗
+
+<br/>
+
+## Pictures
+
 
 
 
