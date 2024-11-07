@@ -142,6 +142,10 @@ a {
     letter-spacing: 11px;
 }
 
+.bottom .title span{
+    font-family: "Helvetica";
+}
+
 .bottom span {
     font-weight: lighter;
     font-family: "Roboto Lt";
