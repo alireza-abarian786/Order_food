@@ -4,7 +4,9 @@
 
 - 👨‍💻 Currently, its HTML and CSS codes have been written
 
-- 🌱 In the future, JS codes will be added to it
+- 🕒 soon, JS codes will be added to it
+
+- ⚡ This website is responsive
 
 <br/>
 
@@ -37,7 +39,9 @@
 
 ![image](https://github.com/alireza-abarian786/Order_food/blob/master/9b195bc7990f6d65188e37871693dc2a.png?raw=true)
 
-<br/> 
+<br/>
+
+## By clicking on the link below, you can access the online mode of the site
 
 [www.OrderFood.com](https://alireza-abarian786.github.io/Order_food/) 
 
