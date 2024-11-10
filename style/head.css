@@ -187,7 +187,7 @@ a {
     color: #191a1c;
 }
 
-.box-btn button:hover {
+.box-btn a:hover {
     background-color: #309a4b;
 }
 
