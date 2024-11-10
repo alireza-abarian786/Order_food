@@ -29,6 +29,8 @@ body {
 .container-head {
     max-width: 1440px;
     height: auto;
+
+    margin: 0 auto;
 }
 
 .header {
@@ -109,8 +111,8 @@ body {
     font-size: 14px;
 }
 
-.Menu {
-    color: #34C759;
+.Menu:hover {
+    color: #34c759;
 }
 
 a {
