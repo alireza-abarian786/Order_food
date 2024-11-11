@@ -2,9 +2,9 @@
 
 - 💻 The first page of the site selling food online
 
-- 👨‍💻 Currently, its HTML and CSS codes have been written
+- 👨‍💻 Technologies used in the project include HTML, CSS, Bootstrap, and JS
 
-- 🕒 soon, JS codes will be added to it
+- 📡 The project is being updated
 
 - ⚡ This website is responsive
 
@@ -13,7 +13,7 @@
 ## What sections does the site include?
 
 1: The first part is the head of the site, which includes ⚜️
-- Ⓜ logo
+- 🏧 logo
 - 📋 menu
 - 📣 The motto of the collection
 - 📚 Quick access to the collection menu
