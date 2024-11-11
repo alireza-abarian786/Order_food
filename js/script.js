@@ -15,8 +15,9 @@ closee.addEventListener("click" , function () {
     // sideMenu.style.transition = "2s ease-out 0.2s"
 })
 
-
-
+window.addEventListener("loadeddata" , function () {
+    this.alert(4)
+})
 
 
 
