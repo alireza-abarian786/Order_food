@@ -4,7 +4,6 @@
     margin: 0 auto;
 
     position: absolute;
-    /* left: 165px; */
     top: 850px;
     bottom: 0;
     right: 50%;
@@ -13,7 +12,6 @@
 
 .About-us {
     width: 1110px;
-    /* height: 736px; */
     background-color: #252525;
 
     font-family: "Helvetica Neue";
@@ -28,7 +26,6 @@
 
 .typo {
     width: 577px;
-    /* height: 150px; */
     text-align: center;
     margin-top: 100px;
     position: relative;
@@ -54,7 +51,6 @@
 
 .content-about {
     width: 100%;
-    /* height: 420px; */
     text-align: center;
 
     display: flex;
@@ -82,22 +78,18 @@
     justify-content: center;
     gap: 10px;
     align-items: center;
-    /* margin: 80px auto 0 auto; */
     position: relative;
 }
 
 .img-about-us {
-    max-width: 350px;
-    height: 270px;
+    max-width: 50%;
 }
 
 .arrow-left {
     width: 80px;
     color: grey;
     position: absolute;
-    /* top: 32%; */
-    /* left: -15%; */
-    transform: translateX(-550%);
+    transform: translateX(-180%);
     stroke-width: 0.7px;
     opacity: 20%;
 }
@@ -106,12 +98,30 @@
     width: 80px;
     color: grey;
     position: absolute;
-    /* top: 32%; */
-    /* right: -15%; */
     stroke-width: 0.7px;
     opacity: 20%;
-    transform: translateX(550%);
+    transform: translateX(90%);
 }
+
+@keyframes fade {
+    0% {
+      opacity: 0;
+  
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+
+.fade {
+    -webkit-animation-name: fade;
+    -moz-animation-name: fade;
+    -o-animation-name: fade;
+    animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+  }
 
 
 /* ----------------------------------------------------------------- */
@@ -127,7 +137,6 @@
 
     .About-us {
         max-width: 100%;
-        /* height: 526px; */
 
     }
 
@@ -137,16 +146,10 @@
 
     .arrow-left {
         width: 60px;
-        /* top: 37%;
-        left: -9%; */
-        transform: translateX(-655%);
     }
 
     .arrow-right {
         width: 60px;
-        /* top: 37%;
-        right: -9%; */
-        transform: translateX(655%);
     }
 }
 
@@ -160,8 +163,6 @@
 
     .About-us {
         max-width: 100%;
-
-        /* height: 400px; */
     }
 
     .typo {
@@ -172,7 +173,6 @@
 
     .typo h2 {
         font-size: 80px;
-        /* letter-spacing: 17px; */
     }
 
     .typo h3 {
@@ -192,22 +192,15 @@
     }
 
     .img-about-us {
-        width: 290px;
-        height: 180px;
+        width: 50%;
     }
 
     .arrow-left {
         width: 40px;
-        /* top: 35%;
-        left: 3%; */
-        transform: translateX(-800%);
     }
 
     .arrow-right {
         width: 40px;
-        /* top: 35%;
-        right: 3%; */
-        transform: translateX(800%);
     }
 }
 
@@ -227,7 +220,6 @@
 
     .About-us {
         max-width: 100%;
-        /* height: 400px; */
     }
 
     .typo h2 {
@@ -244,12 +236,6 @@
         height: 60px;
     }
 
-    /* .text-about {
-        font-size: 10px;
-        width: 100%;
-        line-height: 24px;
-    } */
-
     .content-about {
         gap: 30px;
     }
@@ -260,22 +246,17 @@
     }
 
     .img-about-us {
-        width: 100%;
-        height: 180px;
+        width: 50%;
     }
 
     .arrow-left {
         width: 50px;
-        /* top: 42%;
-        left: 8%; */
-        transform: translateX(-460%);
+        transform: translate(-460%, 170%);
     }
 
     .arrow-right {
         width: 50px;
-        /* top: 42%;
-        right: 8%; */
-        transform: translateX(460%);
+        transform: translate(370%, -275%);
     }
 }
 
@@ -298,8 +279,6 @@
 
     .About-us {
         max-width: 100%;
-
-        /* height: 400px; */
     }
 
     .typo {
@@ -341,28 +320,20 @@
     }
 
     .img-about-us {
-        width: 80%;
-        height: 180px;
+        width: 50%;
     }
 
     .arrow-left {
         width: 40px;
-        /* top: 44%;
-        left: 7%; */
         transform: translateY(-550%) rotate(90deg);
     }
 
     .arrow-right {
         width: 40px;
-        /* top: 44%;
-        right: 7%; */
         transform: translateY(550%) rotate(90deg);
     }
 
 }
-
-
-/* line-height: 25px; */
 
 @media screen and (max-width: 350px) {
     .text-about {
