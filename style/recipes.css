@@ -1,5 +1,8 @@
 .typo-recipes {
     position: relative;
+    max-width: fit-content;
+    margin: 0 auto;
+    cursor: default;
 }
 
 .typo-recipes h3 {
@@ -8,8 +11,8 @@
     letter-spacing: 11px;
     position: absolute;
     top: 31px;
-    right: -10px;
-    left: 1px;
+    right: -80px;
+    left: -70px;
 
 }
 

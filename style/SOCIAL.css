@@ -1,5 +1,8 @@
 .typo-SOCIAL {
     position: relative;
+    max-width: fit-content;
+    margin: 0 auto;
+    cursor: default;
 }
 
 .typo-SOCIAL h3 {

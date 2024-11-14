@@ -22,7 +22,7 @@
     height: 150px;
     margin: 60px auto 0 auto;
     position: relative;
-    cursor: pointer;
+    cursor: default;
 }
 
 .typo-two-item::after {
@@ -77,7 +77,7 @@
 
 .worker-item:hover {
     background-color: #34C759;
-    cursor: pointer;
+    cursor: default;
     transition: 0.5s ease-in-out 0.1s;
     color: #191919;
 }

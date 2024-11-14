@@ -1,6 +1,8 @@
 .typo-deshes {
     position: relative;
-
+    max-width: fit-content;
+    margin: 0 auto;
+    cursor: default;
 }
 
 .typo-deshes h3 {
@@ -11,7 +13,6 @@
     top: 31px;
     right: 13px;
     left: 1px;
-
 }
 
 .dishes {
@@ -29,6 +30,10 @@
     height: 200px;
     text-align: center;
     margin: 0 auto;
+}
+
+.change-after-width::after {
+    width: 90%;
 }
 
 /* ------------------------------------------------------------------ */

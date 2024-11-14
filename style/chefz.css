@@ -1,5 +1,8 @@
 .typo-chefz {
     position: relative;
+    max-width: fit-content;
+    margin: 0 auto;
+    cursor: default;
 }
 
 .typo-chefz h3 {
@@ -8,8 +11,8 @@
     letter-spacing: 12px;
     position: absolute;
     top: 31px;
-    right: 13px;
-    left: 1px;
+    right: -70px;
+    left: -70px;
 
 }
 
@@ -98,7 +101,7 @@
     object-fit: cover;
 }
 
-.typo-chefz h3 {
+/* .typo-chefz h3 {
     font-size: 36px;
     font-weight: 400;
     letter-spacing: 12px;
@@ -106,7 +109,7 @@
     top: 32px;
     right: -1px;
     left: 0;
-}
+} */
 
 /* -------------------------------------------- */
 
