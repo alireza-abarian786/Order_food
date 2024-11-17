@@ -74,6 +74,9 @@
     font-weight: 400;
     letter-spacing: -0.22px;
 }
+.box-user-text a:hover {
+    color: #34C759;
+}
 
 .box-user-text p {
     font-size: 12px;
@@ -100,16 +103,6 @@
     height: 65px;
     object-fit: cover;
 }
-
-/* .typo-chefz h3 {
-    font-size: 36px;
-    font-weight: 400;
-    letter-spacing: 12px;
-    position: absolute;
-    top: 32px;
-    right: -1px;
-    left: 0;
-} */
 
 /* -------------------------------------------- */
 

@@ -55,7 +55,10 @@
     height: 510px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+
+    gap: 30px;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 .item {
@@ -192,11 +195,11 @@
     padding: 10px;
 }
 
-.toop div {
+/* .box-big-date {
     margin-bottom: 59px;
-}
+} */
 
-.toop p {
+.box-big-date p {
     margin-bottom: 60px;
     background-color: #00000061;
     font-size: 10px;
@@ -214,7 +217,7 @@
 .tarikh {
     font-size: 14px;
     font-weight: 400;
-    margin-top: 20px;
+    margin-top: 80px;
 }
 
 .down {

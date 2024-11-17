@@ -149,6 +149,10 @@
     color: #252525;
 }
 
+.box-button .button-green:hover {
+    background-color: #309a4b;
+}
+
 .button-grey {
     border: 2px solid #303030;
     background-color: #262626;
