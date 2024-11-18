@@ -34,11 +34,9 @@
 }
 
 .content-recipes {
-    display: flex;
-    justify-content: space-between;
-    width: 1110px;
-    margin: 0 auto;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(3 , 1fr);
     gap: 30px;
 }
 
@@ -64,6 +62,23 @@
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
+
+    grid-row: 1 / 4;
+
+    width: 540px;
+    height: 510px;
+    border-radius: 5px;
+
+    position: relative;
+
+}
+
+.img {
+    background-image: url(../images/de49247e57416fbb498a0ce9b4d4ee88.png), linear-gradient(rgb(97, 97, 97), rgb(97, 97, 97));
+    background-size: cover;
+    background-position-x: -112px;
+    background-blend-mode: overlay;
+    background-repeat: repeat-x;
 }
 
 .icon-svg-2 {
@@ -134,6 +149,8 @@
     height: 150px;
     background-color: #252525;
     padding: 30px;
+
+    grid-column: 2 / 3;
 }
 
 .cantain-text {
@@ -215,39 +232,6 @@
 .number-item3 {
     font-size: 12px;
 }
-
-/* .g {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 50px;
-} */
-
-/* .toop {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 359px;
-    height: 300px;
-} */
-
-
-
-/* .tarikh {
-    font-size: 14px;
-    font-weight: 400;
-    margin-top: 80px;
-} */
-
-/* .down {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-} */
 
 /* ------------------------------------------------------ */
 

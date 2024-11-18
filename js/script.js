@@ -14,10 +14,10 @@ let buttonGrey = document.querySelectorAll(".button-grey")
 let chefz = document.querySelector(".typo-chefz")
 
 let recipes = document.querySelector(".typo-recipes")
-let box1 = document.querySelector(".box-1")
-let box2 = document.querySelector(".box-2")
+let boxBig = document.querySelector(".box-big")
 let iconBack = document.querySelector(".icon-svg-2")
 let cantainTextBox1 = document.querySelector(".cantain-text-box1")
+let cantainText = document.querySelector(".cantain-text")
 let cantainTextBox1PElem = document.querySelector(".cantain-text-box1 p")
 let cantainFooterLeft = document.querySelector(".cantain-footer-left")
 let dateBox1 = document.querySelector(".date-box1")
@@ -85,11 +85,13 @@ social.addEventListener("mouseover" , () => social.classList.add('change-after-w
 social.addEventListener("mouseout" , () => social.classList.remove('change-after-width'))
 
 iconBack.addEventListener("click" , () => {
-    console.log(5);
 
-    box1.classList.add("item")
-    box1.style.backgroundPositionY = '-115px'
-    box1.style.backgroundPositionX = '0'
+    boxBig.classList.add("item")
+    boxBig.classList.remove("box-big")
+    boxBig.style.gridColumn = "1 / 2"
+
+    boxBig.style.backgroundPositionY = '-115px'
+    boxBig.style.backgroundPositionX = '0'
 
     cantainTextBox1.classList.add("cantain-text")
     cantainTextBox1.classList.remove("cantain-text-box1")
@@ -105,14 +107,18 @@ iconBack.addEventListener("click" , () => {
 })
 
 item.forEach((box) => {
-    console.log(box);
     box.addEventListener("click" , () => {
-        // console.log(event.target.classList.remove());
-        box1.classList.remove("box-1")
-        box1.classList.add("box-2")
-        
-        box2.classList.remove("box-2")
-        box2.classList.add("box-1")
+        box.classList.add("box-big")
+        box.classList.remove("item")
+
+        boxBig.classList.remove("box-big")
+        boxBig.classList.add("item")
+
+       console.log(box);
+       
+
+
+
         
     })
 
