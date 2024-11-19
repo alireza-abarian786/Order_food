@@ -64,6 +64,7 @@
     flex-direction: column;
 
     grid-row: 1 / 4;
+    grid-column: 1 / 2;
 
     width: 540px;
     height: 510px;
@@ -209,7 +210,8 @@
 }
 
 .item-1 {
-    background-color: #252525; 
+    background-color: #252525;
+
 }
 
 .item-2 {
@@ -217,11 +219,13 @@
     background-size: cover;
     background-position-y: -105px;
     background-blend-mode: overlay;
+
 }
 
 .item-3 {
     background-color: #34C759;
     color: #000;
+
 }
 
 .date-item3 p {

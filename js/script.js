@@ -22,7 +22,7 @@ let cantainTextBox1PElem = document.querySelector(".cantain-text-box1 p")
 let cantainFooterLeft = document.querySelector(".cantain-footer-left")
 let dateBox1 = document.querySelector(".date-box1")
 let author = document.querySelector(".author")
-let item = document.querySelectorAll(".item")
+let items = document.querySelectorAll(".box-recipes")
 
 
 let social = document.querySelector(".typo-SOCIAL")
@@ -106,48 +106,60 @@ iconBack.addEventListener("click" , () => {
     iconBack.remove()
 })
 
-item.forEach((box) => {
+items.forEach((box) => {
     box.addEventListener("click" , () => {
-
-        box.classList.add("box-big")
-        box.classList.remove("item")
-
-        box.style.backgroundPositionY = "0"
-        box.style.backgroundBlendMode = "normal"
-
-        box.insertAdjacentHTML("afterbegin" , '<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="icon-svg-2"><path fill-rule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clip-rule="evenodd" /></svg></span>')
+        let boxBig = document.querySelector(".box-big")
         
-        let a = box.childNodes[2]
-        let b = box.childNodes[4].children[0]
-        let c = box.childNodes[2].children[0]
-        
-        a.insertAdjacentHTML("afterend" , '<span class="author">Jason Keller</span>')
+        if (box.classList.contains("box-big")) {
+            console.log(1);
+        } else {
+            console.log(2);
 
-        a.classList.remove("cantain-text")
-        a.classList.add("cantain-text-box1")
+            boxBig.classList.remove("box-big")
+            boxBig.classList.add("item")
 
-        b.classList.remove("date")
-        b.classList.add("date-box1")
+            box.classList.add("box-big")
+            box.classList.remove("item")
+                
+            box.style.backgroundPositionY = "0"
+            box.style.backgroundBlendMode = "normal"
+            
+            box.insertAdjacentHTML("afterbegin" , '<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="icon-svg-2"><path fill-rule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clip-rule="evenodd" /></svg></span>')
 
-        c.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit,"
+            let boxPElem = box.childNodes[2]
+            let detaBox1 = box.childNodes[4].children[0]
+            let pElem = box.childNodes[2].children[0]        
+            
+            boxPElem.insertAdjacentHTML("afterend" , '<span class="author">Jason Keller</span>')
+    
+            boxPElem.classList.remove("cantain-text")
+            boxPElem.classList.add("cantain-text-box1")
+    
+            detaBox1.classList.remove("date")
+            detaBox1.classList.add("date-box1")
+    
+            pElem.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit,"
+    
+            boxBig.classList.remove("box-big")
+            boxBig.classList.add("item")
+            
+            boxBig.children[0].remove()    // span icon
+            boxBig.children[1].remove()   // span author      
+    
+            boxBig.children[0].classList.add("cantain-text")
+            boxBig.children[0].classList.remove("cantain-text-box1")
+            boxBig.children[0].children[0].innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
+            
+            boxBig.children[1].firstElementChild.classList.add("date")
+            boxBig.children[1].firstElementChild.classList.remove("date-box1")
+            
+            boxBig.style.backgroundPositionY = '-115px'
+            boxBig.style.backgroundPositionX = '0'    
 
-        boxBig.classList.remove("box-big")
-        boxBig.classList.add("item")
-        
-        
-        boxBig.children[0].remove()
-        boxBig.children[1].remove()
-
-        boxBig.children[0].classList.add("cantain-text")
-        boxBig.children[0].classList.remove("cantain-text-box1")
-        cantainTextBox1PElem.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
-        
-        boxBig.children[1].firstElementChild.classList.add("date")
-        boxBig.children[1].firstElementChild.classList.remove("date-box1")
-        
-        boxBig.style.backgroundPositionY = '-115px'
-        boxBig.style.backgroundPositionX = '0'
-
+            // console.log(box);
+            // console.log(boxBig);
+            // console.log(boxBig.children[0].children[0]);
+        }
     })
 })
 
