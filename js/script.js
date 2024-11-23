@@ -21,14 +21,14 @@ let cantainText = document.querySelector(".cantain-text")
 let cantainTextBox1PElem = document.querySelector(".cantain-text-box1 p")
 let cantainFooterLeft = document.querySelector(".cantain-footer-left")
 let dateBox1 = document.querySelector(".date-box1")
-let author = document.querySelector(".author")
+let author = document.getElementsByClassName("author")
 let items = document.querySelectorAll(".item")
 
 let item1 = document.querySelector(".item-1")
 let item2 = document.querySelector(".item-2")
 let item3 = document.querySelector(".item-3")
-let isBoxbig;
-let isClickIcon;
+let isBoxbig = true
+let isClickIcon = true
 
 let social = document.querySelector(".typo-SOCIAL")
 
@@ -65,12 +65,8 @@ function changeSlide (n) {
 }
 
 function clickIconItems (item) {
-    
-    iconBack[0].addEventListener("click" , iconBoxBig)
-    // console.log(isClickIcon);
-    if (isClickIcon) {
         console.log(11111111);
-        item.classList.add("item")
+        item.classList.add("item");
         item.classList.remove("box-big")
         item.style.backgroundPositionY = "-105px"
         item.style.backgroundBlendMode = "overlay"
@@ -107,11 +103,8 @@ function clickIconItems (item) {
         if (iconBack[0] !== undefined) {
             iconBack[0].remove()
         }
-        // iconBack[0].remove()
-        
 
         isClickIcon = false
-    }
 }
 
 function changeClassBoxbig () {
@@ -161,26 +154,11 @@ function changeClassBoxbig () {
             
             item3.children[1].children[0].classList.add("date") 
             item3.children[1].children[0].classList.remove("date-box1")
-        } else if (boxBig.classList.contains("item")) {
-            console.log(10);
-            console.log(isBoxbig);
-            
-            // boxBig.classList.add("box-big")
-            // boxBig.classList.remove("item")
-            // cantainTextBox1.classList.add("cantain-text-box1")
-            // cantainTextBox1.classList.remove("cantain-text")
-            // cantainTextBox1PElem.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit,"
-            // dateBox1.classList.add("date-box1")
-            // dateBox1.classList.remove("date")
-            // cantainTextBox1.insertAdjacentHTML("afterend" , '<span class="author">Jason Keller</span>')
-            // boxBig.insertAdjacentHTML("afterbegin" , '<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="icon-svg-2"><path fill-rule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clip-rule="evenodd" /></svg></span>')     
-            // boxBig.style.backgroundPositionX = '-112px'
-            // boxBig.style.backgroundPositionY = '0'
         } else {
-            console.log(11);
+            console.log(10);
         }
 
-        if (!isBoxbig) {
+        if (isBoxbig) {
             console.log(200);
             
             boxBig.classList.add("box-big")
@@ -190,47 +168,26 @@ function changeClassBoxbig () {
             cantainTextBox1PElem.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit,"
             dateBox1.classList.add("date-box1")
             dateBox1.classList.remove("date")
-            cantainTextBox1.insertAdjacentHTML("afterend" , '<span class="author">Jason Keller</span>')
-            boxBig.insertAdjacentHTML("afterbegin" , '<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="icon-svg-2"><path fill-rule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clip-rule="evenodd" /></svg></span>')     
             boxBig.style.backgroundPositionX = '-112px'
             boxBig.style.backgroundPositionY = '0'
+            cantainFooterLeft.style.removeProperty("width")
+            boxBig.style.gridColumn = "1 / 2"
+            isClickIcon = false
+            if (boxBig.childElementCount == 2) {
+                boxBig.insertAdjacentHTML("afterbegin" , '<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="icon-svg-2"><path fill-rule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clip-rule="evenodd" /></svg></span>')     
+                cantainTextBox1.insertAdjacentHTML("afterend" , '<span class="author">Jason Keller</span>')
+                console.log("create");
+                
+            }
         }
     } else {
-        // console.log(boxBig.children);
-        // console.log(iconBack[0]);
-
-        // if (iconBack[0] != undefined) {
-        //     console.log(147);
-            
-        //     iconBack[0].addEventListener("click" , iconBoxBig)
-        // }
-        
-        // // a ()
-        // console.log(isBoxbig);
-        // if (isBoxbig) {
-        //     boxBig.classList.remove("item")
-        //     boxBig.classList.add("box-big")
-        //     cantainTextBox1.classList.add("cantain-text-box1")
-        //     cantainTextBox1.classList.remove("cantain-text")
-        //     cantainTextBox1PElem.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit,"
-        //     dateBox1.classList.add("date-box1")
-        //     dateBox1.classList.remove("date")
-        //     cantainTextBox1.insertAdjacentHTML("afterend" , '<span class="author">Jason Keller</span>')
-        //     boxBig.insertAdjacentHTML("afterbegin" , '<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="icon-svg-2"><path fill-rule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clip-rule="evenodd" /></svg></span>')     
-        //     boxBig.style.backgroundPositionX = '-112px'
-        //     boxBig.style.backgroundPositionY = '0'
-        //     cantainFooterLeft.style.removeProperty("width")
-
-        //     isBoxbig = false
-        // }
-        
-        // if (!isBoxbig) {
-            // iconBoxBig()
-        //     boxBig.children[0].remove()
-        //     boxBig.children[1].remove()
-        // }
-        
+        if (isClickIcon === false) {
+            iconBoxBig()
+        }
     }
+    isBoxbig = true
+    console.log(isBoxbig);
+    
 }
 
 function changeClassItem1 () {           
@@ -305,15 +262,7 @@ function changeClassItem1 () {
         }
     }
     else {
-
         clickIconItems (item1)
-
-        if (!item1.classList.contains("box-big") && !item2.classList.contains("box-big") && !item3.classList.contains("box-big")) {
-            console.log(10);
-            
-            // boxBig.classList.add("box-big")
-            // boxBig.classList.remove("item")   
-        }
     }
 
     boxBig.style.backgroundPositionY = '-115px'
@@ -393,13 +342,6 @@ function changeClassItem2 () {
     } 
     else {
         clickIconItems(item2)
-        
-        if (!item1.classList.contains("box-big") && !item2.classList.contains("box-big") && !item3.classList.contains("box-big")) {
-            console.log(10);
-            
-            // boxBig.classList.add("box-big")
-            // boxBig.classList.remove("item")   
-        }
     }
 
     boxBig.style.backgroundPositionY = '-115px'
@@ -478,13 +420,6 @@ function changeClassItem3 () {
     } 
     else {
         clickIconItems(item3) 
-
-        if (!item1.classList.contains("box-big") && !item2.classList.contains("box-big") && !item3.classList.contains("box-big")) {
-            console.log(10);
-            
-            // boxBig.classList.add("box-big")
-            // boxBig.classList.remove("item")   
-        }
     }
 
     boxBig.style.backgroundPositionY = '-115px'
@@ -492,16 +427,17 @@ function changeClassItem3 () {
 }
 
 function iconBoxBig () {
+    console.log(100);
 
     isClickIcon = true
-    isBoxbig = true
-
-        
-    console.log(100);
+    if (isBoxbig) {
+        isBoxbig = false
+    } else {
+        isBoxbig = true    
+    }
     
+
     boxBig.classList.replace("box-big" , "item")
-    // boxBig.classList.add("item")
-    // boxBig.classList.remove("box-big")
     
     boxBig.style.gridColumn = "1 / 2"
     boxBig.style.backgroundPositionY = '-115px'
@@ -516,7 +452,7 @@ function iconBoxBig () {
     dateBox1.classList.add("date")
     dateBox1.classList.remove("date-box1")
 
-    author.remove()
+    author[0].remove()    
     iconBack[0].parentElement.remove()
 }
 
@@ -532,8 +468,7 @@ buttonGrey.forEach((grey) => {
         event.preventDefault()
         alert("End of inventory")
     })
-})
-
+})      
 
 closee.addEventListener("click" , () => sideMenu.style.transform = "translateX(-250px)")
 
@@ -548,8 +483,8 @@ recipes.addEventListener("mouseout" , () => recipes.classList.remove('change-aft
 social.addEventListener("mouseover" , () => social.classList.add('change-after-width'))
 social.addEventListener("mouseout" , () => social.classList.remove('change-after-width'))
 
-iconBack[0].addEventListener("click" , iconBoxBig)
 boxBig.addEventListener("click" , changeClassBoxbig)
+iconBack[0].addEventListener("click" , iconBoxBig)
 item1.addEventListener("click" , changeClassItem1)
 item2.addEventListener("click" , changeClassItem2)
 item3.addEventListener("click" , changeClassItem3)
