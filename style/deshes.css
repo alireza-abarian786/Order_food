@@ -22,7 +22,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: space-between; */
 }
 
 .typo-two-deshes {
@@ -163,6 +162,29 @@
     font-size: 10px;
     font-weight: 900;
     letter-spacing: 1px;
+}
+.button-grey:hover {
+    border: 2px solid #262626;
+    background-color: #303030;
+}
+
+.modal {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 300px;
+    background-image: linear-gradient(45deg , #303030 40%, #201e1e);
+    position: fixed;
+    top: 20px;
+    right: 33%;
+    z-index: 10;
+    border-radius: 10px;
+}
+
+.modal-text {
+    color: #34C759;
+    font-size: 52px;
 }
 
 

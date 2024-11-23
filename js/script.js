@@ -10,6 +10,7 @@ let work = document.querySelector(".item-work")
 
 let deshes = document.querySelector(".typo-deshes")
 let buttonGrey = document.querySelectorAll(".button-grey")
+let modal = document.querySelector(".modal")
 
 let chefz = document.querySelector(".typo-chefz")
 
@@ -466,9 +467,11 @@ bars.addEventListener("click" , () => {
 buttonGrey.forEach((grey) => {
     grey.addEventListener("click" , (event) => {
         event.preventDefault()
-        alert("End of inventory")
+        modal.style.display = "flex"
     })
-})      
+})
+
+modal.addEventListener("click" , () => modal.style.display = "none")
 
 closee.addEventListener("click" , () => sideMenu.style.transform = "translateX(-250px)")
 
