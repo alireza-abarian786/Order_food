@@ -1,9 +1,7 @@
-
-
 .footer {
     height: 275px;
     background-color: #252525;
-    /* margin-top: 150px; */
+    visibility: hidden;
 }
 
 .footer-tup {

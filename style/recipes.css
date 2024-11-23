@@ -1,3 +1,10 @@
+.content-recipes {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(3 , 1fr);
+    gap: 30px;
+}
+
 .typo-recipes {
     position: relative;
     max-width: fit-content;
@@ -24,6 +31,7 @@
     flex-direction: column;
     align-items: center;
     gap: 50px;
+    visibility: hidden;
 }
 
 .typo-two-recipes {
@@ -31,13 +39,6 @@
     height: 240px;
     text-align: center;
     margin: 0 auto;
-}
-
-.content-recipes {
-    display: grid;
-    grid-template-columns: repeat(2 , 1fr);
-    grid-template-rows: repeat(3 , 1fr);
-    gap: 30px;
 }
 
 /* ------------------------------------------------------- */

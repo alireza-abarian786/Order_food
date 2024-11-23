@@ -4,9 +4,10 @@
     background-color: #1a1a1a;
     margin: 650px auto 0 auto;
     color: #fff;
-
+    
     display: flex;
     flex-direction: column;
+    visibility: hidden;
 }
 
 .typo-two-work {

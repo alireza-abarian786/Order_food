@@ -8,6 +8,8 @@
     bottom: 0;
     right: 50%;
     transform: translatex(50%);
+
+    visibility: hidden;
 }
 
 .About-us {

@@ -2,19 +2,24 @@ let bars = document.querySelector(".fa-bars")
 let closee = document.querySelector(".fa-close")
 let sideMenu = document.querySelector(".top")
 
+let about = document.querySelector(".About-us")
 let textAbout = document.querySelector(".text-about")
 let slides = document.getElementsByClassName("slide")
 let currentIndex = 1
 
-let work = document.querySelector(".item-work")
+let work = document.querySelector(".work")
+let itemWork = document.querySelector(".item-work")
 
-let deshes = document.querySelector(".typo-deshes")
+let deshes = document.querySelector(".dishes")
+let typoDeshes = document.querySelector(".typo-deshes")
 let buttonGrey = document.querySelectorAll(".button-grey")
 let modal = document.querySelector(".modal")
 
-let chefz = document.querySelector(".typo-chefz")
+let chefz = document.querySelector(".chefz")
+let typoChefz = document.querySelector(".typo-chefz")
 
-let recipes = document.querySelector(".typo-recipes")
+let recipes = document.querySelector(".recipes")
+let typoRecipes = document.querySelector(".typo-recipes")
 let boxBig = document.querySelector(".img")
 let iconBack = document.getElementsByClassName("icon-svg-2")
 let cantainTextBox1 = document.querySelector(".cantain-text-box1")
@@ -24,18 +29,21 @@ let cantainFooterLeft = document.querySelector(".cantain-footer-left")
 let dateBox1 = document.querySelector(".date-box1")
 let author = document.getElementsByClassName("author")
 let items = document.querySelectorAll(".item")
-
 let item1 = document.querySelector(".item-1")
 let item2 = document.querySelector(".item-2")
 let item3 = document.querySelector(".item-3")
 let isBoxbig = true
 let isClickIcon = true
 
-let social = document.querySelector(".typo-SOCIAL")
+let social = document.querySelector(".SOCIAL")
+let typoSocial = document.querySelector(".typo-SOCIAL")
 let arrowInsta = document.querySelector(".arrow-Insta")
 let boxImageInsta = document.querySelector(".fot-2")
 let boxTitleInsta = document.querySelector(".tup-insta")
 
+let footer = document.querySelector(".footer")
+
+// ----------------------------------------------
 
 function displayImages(n) {
     currentIndex = n    
@@ -462,6 +470,36 @@ function iconBoxBig () {
 
 // ---------------------------------------
 
+window.addEventListener("scroll" , () => {    
+    about.style.visibility = "visible"
+    about.classList.add("fade")
+
+    if (scrollY >= 1100) {
+        work.style.visibility = "visible"
+        work.classList.add("fade")
+    }
+    if (scrollY >= 1800) {
+        deshes.style.visibility = "visible"
+        deshes.classList.add("fade")
+    }
+    if (scrollY >= 3000) {
+        chefz.style.visibility = "visible"
+        chefz.classList.add("fade")
+    }
+    if (scrollY >= 3600) {
+        recipes.style.visibility = "visible"
+        recipes.classList.add("fade")
+    }
+    if (scrollY >= 4500) {
+        social.style.visibility = "visible"
+        social.classList.add("fade")
+    }
+    if (scrollY >= 4900) {
+        footer.style.visibility = "visible"
+        footer.classList.add("fade")
+    }       
+})
+
 bars.addEventListener("click" , () => {
     sideMenu.style.transform = "translateX(0)"
     sideMenu.style.transition = "2s ease-out 0.2s"
@@ -493,22 +531,21 @@ modal.addEventListener("click" , () => modal.style.display = "none")
 
 closee.addEventListener("click" , () => sideMenu.style.transform = "translateX(-250px)")
 
-work.addEventListener("mouseover" , () => work.classList.add('change-after-width'))
-work.addEventListener("mouseout" , () => work.classList.remove('change-after-width'))
-deshes.addEventListener("mouseover" , () => deshes.classList.add('change-after-width'))
-deshes.addEventListener("mouseout" , () => deshes.classList.remove('change-after-width'))
-chefz.addEventListener("mouseover" , () => chefz.classList.add('change-after-width'))
-chefz.addEventListener("mouseout" , () => chefz.classList.remove('change-after-width'))
-recipes.addEventListener("mouseover" , () => recipes.classList.add('change-after-width'))
-recipes.addEventListener("mouseout" , () => recipes.classList.remove('change-after-width'))
-social.addEventListener("mouseover" , () => social.classList.add('change-after-width'))
-social.addEventListener("mouseout" , () => social.classList.remove('change-after-width'))
+itemWork.addEventListener("mouseover" , () => itemWork.classList.add('change-after-width'))
+itemWork.addEventListener("mouseout" , () => itemWork.classList.remove('change-after-width'))
+typoRecipes.addEventListener("mouseover" , () => typoRecipes.classList.add('change-after-width'))
+typoRecipes.addEventListener("mouseout" , () => typoRecipes.classList.remove('change-after-width'))
+typoChefz.addEventListener("mouseover" , () => typoChefz.classList.add('change-after-width'))
+typoChefz.addEventListener("mouseout" , () => typoChefz.classList.remove('change-after-width'))
+typoDeshes.addEventListener("mouseover" , () => typoDeshes.classList.add('change-after-width'))
+typoDeshes.addEventListener("mouseout" , () => typoDeshes.classList.remove('change-after-width'))
+typoSocial.addEventListener("mouseover" , () => typoSocial.classList.add('change-after-width'))
+typoSocial.addEventListener("mouseout" , () => typoSocial.classList.remove('change-after-width'))
 
 boxBig.addEventListener("click" , changeClassBoxbig)
 iconBack[0].addEventListener("click" , iconBoxBig)
 item1.addEventListener("click" , changeClassItem1)
 item2.addEventListener("click" , changeClassItem2)
 item3.addEventListener("click" , changeClassItem3)
-
 
 

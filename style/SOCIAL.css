@@ -24,6 +24,7 @@
     flex-direction: column;
     align-items: center;
     gap: 50px;
+    visibility: hidden;
 }
 
 .typo-two-SOCIAL {
