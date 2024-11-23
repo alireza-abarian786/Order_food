@@ -85,6 +85,14 @@
     color: #ffffff70;
 }
 
+.tup h6:hover {
+    border: 2px solid #ffffff0f;
+    color: black;
+    background-color: #ffffff70;
+    font-size: 11px;
+    transition: 0.2s ease-in-out 0.1s;
+}
+
 .tup span {
     font-size: 10px;
     letter-spacing: 2px;

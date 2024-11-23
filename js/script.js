@@ -32,6 +32,9 @@ let isBoxbig = true
 let isClickIcon = true
 
 let social = document.querySelector(".typo-SOCIAL")
+let arrowInsta = document.querySelector(".arrow-Insta")
+let boxImageInsta = document.querySelector(".fot-2")
+let boxTitleInsta = document.querySelector(".tup-insta")
 
 
 function displayImages(n) {
@@ -469,6 +472,21 @@ buttonGrey.forEach((grey) => {
         event.preventDefault()
         modal.style.display = "flex"
     })
+})
+
+arrowInsta.addEventListener("click" , () => {
+    let a = boxImageInsta.remove()
+    boxTitleInsta.insertAdjacentHTML("afterend" , `<div class="fot fade">
+                  <span>26 Jun at 16:20 pm</span>
+                  <h6>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet,
+                    consectetur adipiscing Lorem ipsum dolor sit amet,
+                    consectetur adipiscing
+                  </h6>
+                  <!-- <p>@DennisFerguson</p> -->
+                </div>`)
+    
 })
 
 modal.addEventListener("click" , () => modal.style.display = "none")
