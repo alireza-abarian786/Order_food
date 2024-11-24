@@ -2,21 +2,19 @@
     width: 1110px;
     height: 467px;
     background-color: #1a1a1a;
-    margin: 650px auto 0 auto;
+    margin: 960px auto 0 auto;
     color: #fff;
-    
     display: flex;
     flex-direction: column;
     visibility: hidden;
 }
 
 .typo-two-work {
-    width: 1110px;
+    width: 100%;
     height: 240px;
     text-align: center;
     margin: 0 auto;
 }
-
 
 .item-work {
     max-width: fit-content;
@@ -125,19 +123,10 @@
 /* --------------------------------------------------------------- */
 
 @media screen and (max-width:1200px) {
-    .container-work {
-        width: 900px;
-        margin: 0 auto;
-    }
-
     .work {
         width: 900px;
-        margin: 580px auto 0 auto;
+        margin: 800px auto 0 auto;
         height: 655px;
-    }
-
-    .typo-two-work {
-        width: 900px;
     }
 
     .typo-two-item h2 {
@@ -147,26 +136,14 @@
     .item-work h3 {
         font-size: 26px;
         top: 26px;
-        right: 11px;
+        right: 15px;
     }
-
 }
 
 @media screen and (max-width:992px) {
-    .container-work {
-        width: 768px;
-        margin: 0 auto;
-    }
-
     .work {
         width: 730px;
-        margin: 400px auto 0 auto;
         height: auto;
-    }
-
-    .typo-two-work {
-        width: 730px;
-        height: 230px
     }
 }
 
@@ -178,91 +155,31 @@
 
     .work {
         width: 100%;
-        margin: 430px auto 0 auto;
-
+        margin: 600px auto 0 auto;
     }
 
-    .typo-two-work {
-        width: 600px;
-    }
-
-    .item-work {
-        height: 80px;
+    .worker {
+        gap: 20px 0;
     }
 }
 
-@media screen and (max-width:650px) {
-    .work{
-        margin: 570px auto 0 auto;
-    }
-}
 @media screen and (max-width:576px) {
     .container-work {
-        width: 100%;
+        width: 90%;
         margin: 0 auto;
     }
 
     .work {
-        /* width: 100%; */
-        /* margin: 710px auto 0 auto; */
-        height: auto;
+        gap: 70px;
 
     }
 
     .typo-two-work {
-        width: 100%;
+        width: 90%;
         height: 170px
     }
 
-    .item-work {
-        height: 110px;
-        width: 250px;
-    }
-
-    .typo-two-item h2 {
-        font-size: 45px;
-        letter-spacing: 10px;
-    }
-
-    .item-work h3 {
-        font-size: 12px;
-        top: 16px;
-        right: 3px;
-        letter-spacing: 8px;
-    }
-
-    .typo-two-item::after {
-        border: 1.3px solid #34C759;
-        width: 40px;
-    }
-
-    .worker-item {
-        width: 240px;
-        height: 190px;
-        justify-self: center;
-    }
-
-    .itemone h5 {
-        margin: 0.5rem 0;
-        font-size: 18px;
-    }
-
-    .itemone p {
-        font-size: 12px;
-    }
-
     .worker-item h5 {
-        margin: 0.5rem 0;
         font-size: 18px;
-    }
-
-
-    .worker-item p {
-        font-size: 12px;
-    }
-
-    .worker {
-        grid-template-columns: repeat(auto-fill, 1fr);
-        justify-content: space-evenly;
     }
 }

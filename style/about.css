@@ -75,15 +75,19 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    width: 100%;
+}
+
+.picther img {
+    width: 80%;
 }
 
 .arrow-left {
     width: 80px;
     color: grey;
     position: absolute;
-    transform: translate(-180%, -50%);
+    transform: translate(10%, -50%);
     stroke-width: 0.7px;
-    opacity: 20%;
 }
 
 .arrow-right {
@@ -91,8 +95,7 @@
     color: grey;
     position: absolute;
     stroke-width: 0.7px;
-    opacity: 20%;
-    transform: translate(90%, -50%);
+    transform: translate(-110%, -50%);
 }
 
 @keyframes fade {
@@ -208,22 +211,6 @@
     }
 
     .picther {
-        margin: 40px auto 28px auto;
-        height: 330px;
+        margin: 0 auto 28px auto;
     }
-
-    .arrow-left {
-        width: 50px;
-        transform: rotate(-90deg);
-        bottom: 0;
-        left: 45%;
-    }
-
-    .arrow-right {
-        width: 50px;
-        transform: rotate(-90deg);
-        top: 0;
-        left: 45%;
-    }
-
 }
