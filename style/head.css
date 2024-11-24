@@ -306,6 +306,7 @@ a {
 
     .bottom {
         height: 572px;
+        gap: 30px;
     }
 
     .bottom .title {
@@ -350,14 +351,7 @@ a {
     }
 }
 
-
-
-
 @media screen and (max-width:768px) {
-    .header {
-        
-    }
-
     .top {
         width: 600px;
     }
@@ -494,6 +488,7 @@ a {
 
     .bottom {
         max-width: 100%;
+        justify-content: space-evenly;
     }
 
     .bottom span i {
@@ -534,8 +529,6 @@ a {
         display: none;
     }
 }
-
-
 
 @media screen and (max-width:576px) {
     .container{

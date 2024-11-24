@@ -248,11 +248,8 @@
     .content-recipes {
         max-width: 900px;
         margin: 0 auto;
-    }
-
-    .content-recipes {
-        width: auto;
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
     }
 
     .typo-recipes h3 {
@@ -261,7 +258,7 @@
     }
 
     .recipes {
-        height: 1220px;
+        height: 100%;
     }
 }
 
@@ -279,18 +276,9 @@
         width: 730px;
     }
 
-    .content-recipes {
-        width: auto;
-        justify-content: center;
-    }
-
     .typo-recipes h3 {
         font-size: 27px;
         top: 27px;
-    }
-
-    .recipes {
-        height: 1220px;
     }
 }
 
@@ -309,25 +297,22 @@
         width: 600px;
     }
 
-    .content-recipes {
-        width: auto;
-        justify-content: center;
-    }
-
     .typo-recipes h3 {
         font-size: 27px;
         top: 27px;
     }
-
-    .recipes {
-        height: 1300px;
-    }
 }
 
 @media screen and (max-width:576px) {
+    .container-recipes {
+        width: 95%;
+        margin: 0 auto;
+    }
+
     .content-recipes {
         max-width: 100%;
         margin: 0 auto;
+        height: 100%;
     }
 
     .recipes {
@@ -341,11 +326,6 @@
         height: 120px;
     }
 
-    .content-recipes {
-        width: auto;
-        justify-content: center;
-    }
-
     .typo-two-item h2 {
         letter-spacing: 10px;
     }
@@ -356,20 +336,8 @@
         letter-spacing: 8px;
     }
 
-    .recipes {
-        height: 1172px;
-    }
-
     .box-1 {
         max-width: 100%;
-    }
-
-    .toop {
-        max-width: 100%;
-    }
-
-    .toop h6 {
-        font-size: 20px;
     }
 
     .icon-svg-2 {
@@ -377,40 +345,15 @@
         height: 30px;
     }
 
+    .box-big {
+        width: 100%;
+    }
+
     .item {
         width: 100%;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
     }
+
     .item-2{
         background-position-y: -50px;
-    }
-
-    .cantain-text p {
-        font-size: 10px;
-        line-height: 25px;
-    }
-
-    .date p {
-        font-size: 8px;
-    }
-
-    .date span {
-        font-size: 10px;
-    }
-
-    .number {
-        font-size: 10px;
-    }
-
-    .eye span i {
-        font-size: 15px;
-        margin-right: 10px;
-    }
-
-    .cantain-footer-right {
-        gap: 15px;
     }
 }
