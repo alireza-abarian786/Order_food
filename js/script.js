@@ -513,27 +513,27 @@ window.addEventListener("scroll" , (event) => {
             about.style.visibility = "visible"
             about.classList.add("fade")
         }
-        if (scrollY >= 1200) {
+        if (scrollY >= 1400) {
             work.style.visibility = "visible"
             work.classList.add("fade")
         }
-        if (scrollY >= 1800) {
+        if (scrollY >= 2100) {
             deshes.style.visibility = "visible"
             deshes.classList.add("fade")
         }
-        if (scrollY >= 3000) {
+        if (scrollY >= 3400) {
             chefz.style.visibility = "visible"
             chefz.classList.add("fade")
         }
-        if (scrollY >= 3600) {
+        if (scrollY >= 4000) {
             recipes.style.visibility = "visible"
             recipes.classList.add("fade")
         }
-        if (scrollY >= 4500) {
+        if (scrollY >= 4700) {
             social.style.visibility = "visible"
             social.classList.add("fade")
         }
-        if (scrollY >= 4900) {
+        if (scrollY >= 5200) {
             footer.style.visibility = "visible"
             footer.classList.add("fade")
         }
@@ -541,43 +541,43 @@ window.addEventListener("scroll" , (event) => {
     } 
     else if (window.innerWidth <= 1200 && window.innerWidth >= 992) {
         
-        if (scrollY >= 950) {
+        if (scrollY >= 1200) {
             work.style.visibility = "visible"
             work.classList.add("fade")
         }
-        if (scrollY >= 2000) {
+        if (scrollY >= 2100) {
             deshes.style.visibility = "visible"
             deshes.classList.add("fade")
         }
-        if (scrollY >= 3600) {            
+        if (scrollY >= 3900) {            
             chefz.style.visibility = "visible"
             chefz.classList.add("fade")
         }
-        if (scrollY >= 4200) {
+        if (scrollY >= 4800) {
             recipes.style.visibility = "visible"
             recipes.classList.add("fade")
         }  
-        if (scrollY >= 5100) {
+        if (scrollY >= 6100) {
             social.style.visibility = "visible"
             social.classList.add("fade")
         }  
-        if (scrollY >= 5900) {
+        if (scrollY >= 6550) {
             footer.style.visibility = "visible"
             footer.classList.add("fade")
         }  
 
     } 
-    else if (window.innerWidth <= 992) {
+    else if (window.innerWidth <= 992 && window.innerWidth >= 768) {
         
-        if (scrollY >= 700) {            
+        if (scrollY >= 1200) {            
             work.style.visibility = "visible"
             work.classList.add("fade")
         }
-        if (scrollY >= 1500) {
+        if (scrollY >= 1600) {
             deshes.style.visibility = "visible"
             deshes.classList.add("fade")
         }
-        if (scrollY >= 3250) {            
+        if (scrollY >= 3400) {            
             chefz.style.visibility = "visible"
             chefz.classList.add("fade")
         }
@@ -589,16 +589,71 @@ window.addEventListener("scroll" , (event) => {
             social.style.visibility = "visible"
             social.classList.add("fade")
         }  
-        if (scrollY >= 5900) {
+        if (scrollY >= 6500) {
             footer.style.visibility = "visible"
             footer.classList.add("fade")
         }  
 
     }
+    else if (window.innerWidth <= 768 && window.innerWidth >= 576) {
+        
+        if (scrollY >= 1000) {            
+            work.style.visibility = "visible"
+            work.classList.add("fade")
+        }
+        if (scrollY >= 1900) {
+            deshes.style.visibility = "visible"
+            deshes.classList.add("fade")
+        }
+        if (scrollY >= 5300) {            
+            chefz.style.visibility = "visible"
+            chefz.classList.add("fade")
+        }
+        if (scrollY >= 6200) {
+            recipes.style.visibility = "visible"
+            recipes.classList.add("fade")
+        }  
+        if (scrollY >= 7500) {
+            social.style.visibility = "visible"
+            social.classList.add("fade")
+        }  
+        if (scrollY >= 8600) {
+            footer.style.visibility = "visible"
+            footer.classList.add("fade")
+        }  
 
+    }
+    else if (window.innerWidth <= 576) {
+        
+        if (scrollY >= 850) {            
+            work.style.visibility = "visible"
+            work.classList.add("fade")
+        }
+        if (scrollY >= 1700) {
+            deshes.style.visibility = "visible"
+            deshes.classList.add("fade")
+        }
+        if (scrollY >= 5000) {            
+            chefz.style.visibility = "visible"
+            chefz.classList.add("fade")
+        }
+        if (scrollY >= 5800) {
+            recipes.style.visibility = "visible"
+            recipes.classList.add("fade")
+        }  
+        if (scrollY >= 7200) {
+            social.style.visibility = "visible"
+            social.classList.add("fade")
+        }  
+        if (scrollY >= 8350) {
+            footer.style.visibility = "visible"
+            footer.classList.add("fade")
+        }  
 
-
-    
+    } 
+    else {
+        console.log("res");
+    }
 })
 
 bars.addEventListener("click" , () => {
