@@ -1,11 +1,9 @@
 .footer {
-    height: 275px;
     background-color: #252525;
     visibility: hidden;
 }
 
 .footer-tup {
-    height: 160px;
     border-bottom: 2px solid #303030;
     display: flex;
 }
@@ -14,9 +12,11 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 825px;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
+    flex-wrap: wrap;
+    padding: 40px;
 }
 
 .copy {
@@ -33,9 +33,24 @@
     line-height: 45px;
 }
 
+.nav-logo-footer {
+    margin: 0;
+    text-align: center;
+    flex-direction: column;
+}
+
+.icon-logo-footer{
+    width: 60px;
+    height: 60px;
+}
+
 /* -------------------------------------------------------------------- */
 
-@media screen and (max-width:1200px) {}
-@media screen and (max-width:992px) {}
-@media screen and (max-width:768px) {}
-@media screen and (max-width:576px) {}
+@media screen and (max-width:768px) {
+    .conect {
+        width: 100%;
+    }
+    .copy {
+        padding-top: 5%;
+    }
+}

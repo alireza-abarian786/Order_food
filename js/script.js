@@ -82,7 +82,11 @@ function clickIconItems (item) {
         console.log(11111111);
         item.classList.add("item");
         item.classList.remove("box-big")
-        item.style.backgroundPositionY = "-105px"
+        if (window.innerWidth <= 480) {
+            item.style.removeProperty("background-position-y")
+        } else {
+            item.style.backgroundPositionY = "-105px"
+        }
         item.style.backgroundBlendMode = "overlay"
     
         item.children[0].remove()
@@ -100,8 +104,7 @@ function clickIconItems (item) {
         boxBig.classList.remove("box-big")
     
         boxBig.style.gridColumn = "1 / 2"
-        boxBig.style.backgroundPositionY = '-115px'
-        boxBig.style.backgroundPositionX = '0'
+        changePositon()
     
         cantainTextBox1.classList.add("cantain-text")
         cantainTextBox1.classList.remove("cantain-text-box1")
@@ -279,8 +282,7 @@ function changeClassItem1 () {
         clickIconItems (item1)
     }
 
-    boxBig.style.backgroundPositionY = '-115px'
-    boxBig.style.backgroundPositionX = '0'
+    changePositon()
 }
 
 function changeClassItem2 () {
@@ -358,8 +360,7 @@ function changeClassItem2 () {
         clickIconItems(item2)
     }
 
-    boxBig.style.backgroundPositionY = '-115px'
-    boxBig.style.backgroundPositionX = '0'
+    changePositon()
 }
 
 function changeClassItem3 () {
@@ -436,8 +437,7 @@ function changeClassItem3 () {
         clickIconItems(item3) 
     }
 
-    boxBig.style.backgroundPositionY = '-115px'
-    boxBig.style.backgroundPositionX = '0'
+    changePositon()
 }
 
 function iconBoxBig () {
@@ -454,7 +454,7 @@ function iconBoxBig () {
     boxBig.classList.replace("box-big" , "item")
     
     boxBig.style.gridColumn = "1 / 2"
-    boxBig.style.backgroundPositionY = '-115px'
+    changePositon()
     boxBig.style.backgroundPositionX = '0'
 
     cantainTextBox1.classList.add("cantain-text")
@@ -468,6 +468,15 @@ function iconBoxBig () {
 
     author[0].remove()    
     iconBack[0].parentElement.remove()
+}
+
+function changePositon() {
+    if (window.innerWidth <= 480) {
+        boxBig.style.removeProperty("background-position")
+    } else {
+        boxBig.style.backgroundPositionY = '-115px'
+        boxBig.style.backgroundPositionX = '0'
+    }
 }
 
 function responseChefz () {

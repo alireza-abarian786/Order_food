@@ -18,7 +18,6 @@
 
 .SOCIAL {
     width: 1110px;
-    height: 540px;
     margin: 130px auto;
     display: flex;
     flex-direction: column;
@@ -29,7 +28,6 @@
 
 .typo-two-SOCIAL {
     width: 1110px;
-    height: 240px;
     text-align: center;
     margin: 0 auto;
 }
@@ -173,80 +171,50 @@
 
 @media screen and (max-width:1200px) {
     .container-SOCIAL {
-        max-width: 900px;
+        max-width: 95%;
         margin: 0 auto;
     }
 
     .SOCIAL {
-        width: 900px;
-        height: 810px;
+        width: 100%;
     }
 
     .typo-two-SOCIAL {
-        width: 900px;
-    }
-
-    .cantain-SOCIAL {
-        max-width: 900px;
-        justify-content: space-evenly;
-        gap: 50px;
+        width: 100%;
     }
 
     .typo-SOCIAL h3 {
         font-size: 28px;
         top: 25px;
+    }
+
+    .cantain-SOCIAL {
+        justify-content: center;
     }
 }
 
 @media screen and (max-width:992px) {
-    .container-SOCIAL {
-        max-width: 730px;
-        margin: 0 auto;
-    }
-
-    .SOCIAL {
-        width: 730px;
-        height: 1260px;
-    }
-
-    .typo-two-SOCIAL {
-        width: 730px;
-    }
-
-    .cantain-SOCIAL {
-        max-width: 730px;
-        justify-content: space-evenly;
-        gap: 50px;
-    }
-
     .typo-SOCIAL h3 {
         font-size: 28px;
         top: 25px;
     }
+
+    .boxing {
+        width: 540px;
+        height: max-content;
+    }
+
+    .tup {
+        flex-wrap: wrap;
+         width: 100%;
+         gap: 30px;
+         justify-content: center;
+         height: max-content;
+         padding: 20px;
+    }
 }
 
 @media screen and (max-width:768px) {
-    .container-SOCIAL {
-        max-width: 600px;
-        margin: 0 auto;
-    }
-
-    .SOCIAL {
-        width: 600px;
-        height: 1260px;
-        gap: 0;
-    }
-
-    .typo-two-SOCIAL {
-        width: 600px;
-    }
-
-    .cantain-SOCIAL {
-        max-width: 600px;
-        justify-content: space-evenly;
-        gap: 50px;
-    }
-
     .typo-SOCIAL h3 {
         font-size: 28px;
         top: 25px;
@@ -254,66 +222,20 @@
 }
 
 @media screen and (max-width:576px) {
-    .container-SOCIAL {
-        max-width: 100%;
-        margin: 0 auto;
+    .typo-two-SOCIAL .typo-two-item h2 {
+        font-size: 40px;
+        letter-spacing: 10px;
     }
 
-    .SOCIAL {
-        width: 100%;
-        height: 1260px;
-        gap: 0;
+    .typo-SOCIAL h3 {
+        font-size: 16px;
+        top: 15px;
+        letter-spacing: 8px;
     }
 
-    .typo-two-SOCIAL {
-        width: 100%;
-        height: 130px;
-    }
-
-    .cantain-SOCIAL {
-        max-width: 100%;
-        justify-content: space-evenly;
-        gap: 50px;
-    }
-}
-
-@media screen and (max-width:350px) {
     .boxing {
         width: 100%;
-    }
-    .tup {
-        padding: 0 20px;
+        height: fit-content;
     }
 
-    .tup span {
-        padding: 8px;
-    }
-
-    .tup div p {}
-
-    .tup div {
-        gap: 10px;
-    }
-
-    .tup h6 {
-        letter-spacing: 0;
-        padding: 10px 10px
-    }
-
-    .fot h6 {
-        line-height: 20px;
-    }
-
-    .fot span {}
-
-    .fot p {}
-
-    .tup div p,
-    .tup h6,
-    .fot h6,
-    .fot span,
-    .fot p,
-    .tup i {
-        font-size: 10px;
-    }
 }

@@ -35,8 +35,8 @@
 }
 
 .typo-two-recipes {
-    width: 1110px;
-    height: 240px;
+    width: 100%;
+    height: fit-content;
     text-align: center;
     margin: 0 auto;
 }
@@ -245,6 +245,13 @@
 /* ------------------------------------------------------ */
 
 @media screen and (max-width:1200px) {
+    .container-recipes{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .recipes{
+        width: 100%;
+    }
     .content-recipes {
         max-width: 900px;
         margin: 0 auto;
@@ -272,9 +279,9 @@
         width: 730px;
     }
 
-    .typo-two-recipes {
+    /* .typo-two-recipes {
         width: 730px;
-    }
+    } */
 
     .typo-recipes h3 {
         font-size: 27px;
@@ -289,13 +296,13 @@
     }
 
     .recipes {
-        width: 600px;
+        width: 565px;
         gap: 0;
     }
 
-    .typo-two-recipes {
+    /* .typo-two-recipes {
         width: 600px;
-    }
+    } */
 
     .typo-recipes h3 {
         font-size: 27px;
@@ -306,7 +313,7 @@
 @media screen and (max-width:576px) {
     .container-recipes {
         width: 95%;
-        margin: 0 auto;
+        margin: 50px auto;
     }
 
     .content-recipes {
@@ -318,7 +325,7 @@
     .recipes {
         width: 100%;
         gap: 0;
-        margin: 120px auto 0 auto;
+        margin: 0;
     }
 
     .typo-two-recipes {
@@ -326,14 +333,15 @@
         height: 120px;
     }
 
-    .typo-two-item h2 {
-        letter-spacing: 10px;
+    .typo-two-recipes .typo-two-item h2 {
+        font-size: 40px;
+        letter-spacing: 7px;
     }
 
     .typo-recipes h3 {
         font-size: 10px;
-        top: 20px;
-        letter-spacing: 8px;
+        top: 18px;
+        letter-spacing: 5px;
     }
 
     .box-1 {
@@ -351,9 +359,28 @@
 
     .item {
         width: 100%;
+        height: max-content;
     }
 
     .item-2{
-        background-position-y: -50px;
+        background-position-y: 0;
+    }
+
+    .img {
+        background-position: 0;
+    }
+
+    .cantain-footer-left {
+        flex-wrap: wrap;
+        gap: 30px;
+        /* justify-content: center; */
+    }
+
+    .cantain-text {
+        margin-bottom: 30px;
+    }
+
+    .date-box1 {
+        gap: 15px;
     }
 }

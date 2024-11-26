@@ -215,7 +215,7 @@
     .container-chefz {
         width: 95%;
         margin: 0 auto;
-        height: 1000px;
+        /* height: 1000px; */
     }
 
     .chefz {
@@ -248,6 +248,10 @@
 
 }
 @media screen and (max-width:380px) {
+    .container-chefz {
+        height: 1000px;
+    }
+
     .box-user {
         width: 100%;
         display: grid;
