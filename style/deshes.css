@@ -50,13 +50,13 @@
     background-color: #252525;
     border-radius: 4px;
     overflow: hidden;
+    position: relative;
 }
 
 .box-top {
     width: 350px;
     height: 260px;
     background-color: cadetblue;
-    position: relative;
 }
 
 .box-top span img {
@@ -65,7 +65,7 @@
     width: 40px;
     height: 40px;
     right: 8%;
-    top: 10%;
+    top: 5%;
     background-color: #00000052;
     border-radius: 100px;
     padding: 10px;
@@ -282,14 +282,31 @@
 
     .typo-two-deshes {
         width: 100%;
+        height: 130px;
     }
 
     .typo-two-deshes .typo-two-item h2 {
-        font-size: 76px;
+        font-size: 48px;
+        letter-spacing: 10px;
+        width: 100%;
     }
 
     .typo-deshes h3 {
-        letter-spacing: 8px;
+        letter-spacing: 7px;
+        font-size: 15px;
+        top: 20px;
+        left: 0;
+        right: 27px;
+        width: 100%;
+    }
+
+    .contain-box-items{
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .footer-box {
+        flex-wrap: wrap;
+        gap: 30px;
     }
 
     .modal {
@@ -302,12 +319,8 @@
     }
 }
 
-@media screen and (max-width:350px) {
+@media screen and (max-width:380px) {
     .contain-box-items {
         grid-template-columns: repeat(1, 1fr);
-    }
-
-    .box-top span img {
-        right: 15%;
     }
 }

@@ -17,6 +17,8 @@ let modal = document.querySelector(".modal")
 
 let chefz = document.querySelector(".chefz")
 let typoChefz = document.querySelector(".typo-chefz")
+let imgBoxChefz = document.querySelectorAll(".box-picher-user")
+let BoxUser = document.querySelectorAll(".box-user")
 
 let recipes = document.querySelector(".recipes")
 let typoRecipes = document.querySelector(".typo-recipes")
@@ -467,6 +469,30 @@ function iconBoxBig () {
     author[0].remove()    
     iconBack[0].parentElement.remove()
 }
+
+function responseChefz () {
+    
+    if (window.innerWidth <= 380) {
+        imgBoxChefz.forEach(box => box.remove())
+       
+        BoxUser[0].insertAdjacentHTML("beforeend" , `
+            <img class="img-item-one" src="./images/25005c67efdddf0cd070638a2b5ba6e8.jpg" alt="">
+            <img class="img-item-two" src="./images/27b450f246f65a55ed71a8f982295126.jpg" alt="">
+            <img class="three" src="./images/1e157d9b1f6fc7f77860f24fbd7d0b6c.jpg" alt="">`
+        )
+        BoxUser[1].insertAdjacentHTML("beforeend" , `
+                <img class="img-item-one" src="./images/d59512e67abe654272d6345e9be40a93.jpg" alt="">
+                <img class="img-item-two" src="./images/6e4f0b61ced5c016e3f8e3bab8e3770f.jpg" alt="">
+                <img class="three" src="./images/e38ac483fc29e500c2cad7aed75f6e10.jpg" alt="">`
+        )
+        BoxUser[2].insertAdjacentHTML("beforeend" , `
+                <img class="img-item-one" src="./images/8e2209fa7fc1af0f90afaf6ba50aab24.jpg" alt="">
+                <img class="img-item-two" src="./images/19b3011258b75523162abb66f2a445dc.jpg" alt="">
+                <img class="three" src="./images/f37143a4e54ff440ed6bafd20de87190.jpg" alt="">`
+        )
+    }
+}
+responseChefz()
 
 // ---------------------------------------
 

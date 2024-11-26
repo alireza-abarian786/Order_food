@@ -165,18 +165,38 @@
 
 @media screen and (max-width:576px) {
     .container-work {
-        width: 90%;
+        width: 95%;
         margin: 0 auto;
     }
 
-    .work {
-        gap: 70px;
-
+    .typo-two-work {
+        height: 170px
     }
 
-    .typo-two-work {
-        width: 90%;
-        height: 170px
+    .item-work {
+        max-width:fit-content;
+    }
+
+    .item-work h2 {
+        font-size: 52px;
+        letter-spacing: 10px;
+    }
+
+    .item-work h3 {
+        font-size: 16px;
+        top: 20px;
+        letter-spacing: 8px;
+        left: 0;
+        right: 0;
+    }
+
+    .worker {
+        grid-template-columns: repeat(auto-fill, 100%);
+    }
+
+    .worker-item {
+        width: 100%;
+        height: fit-content;
     }
 
     .worker-item h5 {

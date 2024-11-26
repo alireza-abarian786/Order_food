@@ -122,6 +122,11 @@
     height: 70px;
 }
 
+.three:hover {
+    width: 70px;
+    height: 70px;
+}
+
 /* -------------------------------------------- */
 
 @media screen and (max-width:1200px) {
@@ -208,8 +213,9 @@
 
 @media screen and (max-width:576px) {
     .container-chefz {
-        width: 100%;
+        width: 95%;
         margin: 0 auto;
+        height: 1000px;
     }
 
     .chefz {
@@ -222,25 +228,57 @@
         width: 100%;
     }
 
+    .typo-two-chefz .typo-two-item h2 {
+        font-size: 48px;
+        letter-spacing: 15px;
+    }
+
     .typo-chefz h3 {
-        letter-spacing: 8px;
-        /* font-size: 10px;
-        top: 19px;
-        right: -12px;
-        left: 0; */
+        letter-spacing: 5px;
+        font-size: 15px;
+        top: 20px;
     }
 
     .content-chefz {
         justify-content: space-evenly;
         flex-wrap: wrap;
-        width: auto;
+        width: 100%;
         gap: 50px;
     }
 
 }
-@media screen and (max-width:350px) {
+@media screen and (max-width:380px) {
     .box-user {
         width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 20px;
+        height: auto;
+    }
+
+    .content-box-user {
+        grid-column: 1 / 3;
+        justify-self: center;
+    }
+
+    .img-item-one {
+        grid-row: 2 / 3;
+        grid-column: 1 / 3;
+        justify-self: center;
+        width: 204px;
+    }
+
+    .img-item-two {
+        justify-self: end;
+        width: 92px;
+    }
+
+    .three {
+        justify-self: start;
+        width: 92px;
+        height: 65px;
+        object-fit: cover;
     }
 
 }
