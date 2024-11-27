@@ -34,8 +34,6 @@ let items = document.querySelectorAll(".item")
 let item1 = document.querySelector(".item-1")
 let item2 = document.querySelector(".item-2")
 let item3 = document.querySelector(".item-3")
-let isBoxbig = true
-let isClickIcon = true
 
 let social = document.querySelector(".SOCIAL")
 let typoSocial = document.querySelector(".typo-SOCIAL")
@@ -79,202 +77,45 @@ function changeSlide (n) {
 }
 
 function clickIconItems (item) {
-        console.log(11111111);
-        item.classList.add("item");
-        item.classList.remove("box-big")
         if (window.innerWidth <= 480) {
             item.style.removeProperty("background-position-y")
         } else {
             item.style.backgroundPositionY = "-105px"
         }
-        item.style.backgroundBlendMode = "overlay"
-    
-        item.children[0].remove()
-        item.children[1].remove()
-    
-        item.children[0].classList.remove("cantain-text-box1")
-        item.children[0].classList.add("cantain-text")
-    
-        item.children[0].children[0].innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
-    
-        item.children[1].children[0].classList.add("date") 
-        item.children[1].children[0].classList.remove("date-box1")
-
-        boxBig.classList.add("item")
-        boxBig.classList.remove("box-big")
-    
-        boxBig.style.gridColumn = "1 / 2"
-        changePositon()
-    
-        cantainTextBox1.classList.add("cantain-text")
-        cantainTextBox1.classList.remove("cantain-text-box1")
-        cantainTextBox1PElem.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
-    
-        cantainFooterLeft.style.width = "100%"
-    
-        dateBox1.classList.add("date")
-        dateBox1.classList.remove("date-box1")
-    
-        author.remove()
-        console.log(boxBig);
-        if (iconBack[0] !== undefined) {
-            iconBack[0].remove()
-        }
-
-        isClickIcon = false
+        addItem(item)
+        iconBoxBig()
 }
 
 function changeClassBoxbig () {
-    console.log(4);
     
     if (!boxBig.classList.contains("box-big")) {
-        
+        addBoxBig()
         if (item1.classList.contains("box-big")) {
-            item1.classList.add("item")
-            item1.classList.remove("box-big")
-            
-            item1.children[0].remove()
-            item1.children[1].remove()
-            
-            item1.children[0].classList.remove("cantain-text-box1")
-            item1.children[0].classList.add("cantain-text")
-            
-            item1.children[0].children[0].innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
-            
-            item1.children[1].children[0].classList.add("date") 
-            item1.children[1].children[0].classList.remove("date-box1")
+            addItem(item1)
         } else if (item2.classList.contains("box-big")) {
-            item2.classList.add("item")
-            item2.classList.remove("box-big")
-        
-            item2.children[0].remove()
-            item2.children[1].remove()
-        
-            item2.children[0].classList.remove("cantain-text-box1")
-            item2.children[0].classList.add("cantain-text")
-        
-            item2.children[0].children[0].innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
-        
-            item2.children[1].children[0].classList.add("date") 
-            item2.children[1].children[0].classList.remove("date-box1")
+            addItem(item2)
         } else if (item3.classList.contains("box-big")) {
-            item3.classList.add("item")
-            item3.classList.remove("box-big")
-            
-            item3.children[0].remove()
-            item3.children[1].remove()
-            
-            item3.children[0].classList.remove("cantain-text-box1")
-            item3.children[0].classList.add("cantain-text")
-            
-            item3.children[0].children[0].innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
-            
-            item3.children[1].children[0].classList.add("date") 
-            item3.children[1].children[0].classList.remove("date-box1")
+            addItem(item3)
         } else {
             console.log(10);
         }
 
-        if (isBoxbig) {
-            console.log(200);
-            
-            boxBig.classList.add("box-big")
-            boxBig.classList.remove("item")
-            cantainTextBox1.classList.add("cantain-text-box1")
-            cantainTextBox1.classList.remove("cantain-text")
-            cantainTextBox1PElem.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit,"
-            dateBox1.classList.add("date-box1")
-            dateBox1.classList.remove("date")
-            boxBig.style.backgroundPositionX = '-112px'
-            boxBig.style.backgroundPositionY = '0'
-            cantainFooterLeft.style.removeProperty("width")
-            boxBig.style.gridColumn = "1 / 2"
-            isClickIcon = false
-            if (boxBig.childElementCount == 2) {
-                boxBig.insertAdjacentHTML("afterbegin" , '<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="icon-svg-2"><path fill-rule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clip-rule="evenodd" /></svg></span>')     
-                cantainTextBox1.insertAdjacentHTML("afterend" , '<span class="author">Jason Keller</span>')
-                console.log("create");
-                
-            }
-        }
     } else {
-        if (isClickIcon === false) {
             iconBoxBig()
-        }
     }
-    isBoxbig = true
-    console.log(isBoxbig);
-    
 }
 
 function changeClassItem1 () {           
-    console.log(1);
-    let boxPElem = item1.children[0]
-    let pElem = item1.children[0].children[0]
-    let boxDate = item1.children[1].children[0]
 
     if (!item1.classList.contains("box-big")) {
 
-        item1.insertAdjacentHTML("afterbegin" , '<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="icon-svg-2"><path fill-rule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clip-rule="evenodd" /></svg></span>')
-        item1.classList.add("box-big")
-        item1.classList.remove("item")
-        
-        boxPElem.classList.add("cantain-text-box1")
-        boxPElem.classList.remove("cantain-text")
-        boxPElem.insertAdjacentHTML("afterend" , '<span class="author">Jason Keller</span>')
-    
-        pElem.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit,"
-    
-        boxDate.classList.add("date-box1") 
-        boxDate.classList.remove("date") 
-        
-        boxBig.classList.add("item")
-        boxBig.classList.remove("box-big")
-        if (boxBig.childElementCount === 4) {            
-            boxBig.children[0].remove()
-            boxBig.children[1].remove()
-        }
-        cantainTextBox1.classList.add("cantain-text")
-        cantainTextBox1.classList.remove("cantain-text-box1")
-        cantainTextBox1PElem.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
-        dateBox1.classList.add("date")
-        dateBox1.classList.remove("date-box1")
-
+        addBoxBigToItem(item1)
 
         if (item2.classList.contains("box-big")) {
-            // changeClassItem2()
-            item2.classList.add("item")
-            item2.classList.remove("box-big")
-            item2.style.backgroundPositionY = "-105px"
-            item2.style.backgroundBlendMode = "overlay"
-            
-            item2.children[0].remove()
-            item2.children[1].remove()
-            
-            item2.children[0].classList.remove("cantain-text-box1")
-            item2.children[0].classList.add("cantain-text")
-            
-            item2.children[0].children[0].innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
-            
-            item2.children[1].children[0].classList.add("date") 
-            item2.children[1].children[0].classList.remove("date-box1")
+            addItem(item2)
         } else if (item3.classList.contains("box-big")) {
-            // changeClassItem3()
-            item3.classList.add("item")
-            item3.classList.remove("box-big")
-            
-            item3.children[0].remove()
-            item3.children[1].remove()
-            
-            item3.children[0].classList.remove("cantain-text-box1")
-            item3.children[0].classList.add("cantain-text")
-            
-            item3.children[0].children[0].innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
-            
-            item3.children[1].children[0].classList.add("date") 
-            item3.children[1].children[0].classList.remove("date-box1")
+            addItem(item3)
         } else {
-            console.log(1);
             boxBig.style.gridColumn = "2 / 3"
         }
     }
@@ -286,72 +127,14 @@ function changeClassItem1 () {
 }
 
 function changeClassItem2 () {
-    console.log(2);
-    let boxPElem = item2.children[0]
-    let pElem = item2.children[0].children[0]
-    let boxDate = item2.children[1].children[0]
 
     if (!item2.classList.contains("box-big")) {
-
-        item2.insertAdjacentHTML("afterbegin" , '<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="icon-svg-2"><path fill-rule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clip-rule="evenodd" /></svg></span>')
-        item2.classList.add("box-big")
-        item2.classList.remove("item")
-        item2.style.backgroundPositionY = "0"
-        item2.style.backgroundBlendMode = "normal"
-        
-        boxPElem.classList.add("cantain-text-box1")
-        boxPElem.classList.remove("cantain-text")
-        boxPElem.insertAdjacentHTML("afterend" , '<span class="author">Jason Keller</span>')
-    
-        pElem.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit,"
-    
-        boxDate.classList.add("date-box1") 
-        boxDate.classList.remove("date") 
-        
-        boxBig.classList.add("item")
-        boxBig.classList.remove("box-big")
-        if (boxBig.childElementCount === 4) {            
-            boxBig.children[0].remove()
-            boxBig.children[1].remove()
-        }
-        cantainTextBox1.classList.add("cantain-text")
-        cantainTextBox1.classList.remove("cantain-text-box1")
-        cantainTextBox1PElem.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
-        dateBox1.classList.add("date")
-        dateBox1.classList.remove("date-box1")
-
+        addBoxBigToItem(item2)
         if (item1.classList.contains("box-big")) {
-            // changeClassItem1()
-            item1.classList.add("item")
-            item1.classList.remove("box-big")
-            
-            item1.children[0].remove()
-            item1.children[1].remove()
-            
-            item1.children[0].classList.remove("cantain-text-box1")
-            item1.children[0].classList.add("cantain-text")
-            
-            item1.children[0].children[0].innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
-            
-            item1.children[1].children[0].classList.add("date") 
-            item1.children[1].children[0].classList.remove("date-box1")
+            addItem(item1)
         } else if (item3.classList.contains("box-big")) {
-            // changeClassItem3()
-            item3.classList.add("item")
-            item3.classList.remove("box-big")
-            
-            item3.children[0].remove()
-            item3.children[1].remove()
-            
-            item3.children[0].classList.remove("cantain-text-box1")
-            item3.children[0].classList.add("cantain-text")
-            
-            item3.children[0].children[0].innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
-            
-            item3.children[1].children[0].classList.add("date") 
-            item3.children[1].children[0].classList.remove("date-box1")
+            addItem(item3)
         } else {
-            console.log(2);
             boxBig.style.gridColumn = "2 / 3"
         }
 
@@ -364,71 +147,14 @@ function changeClassItem2 () {
 }
 
 function changeClassItem3 () {
-    console.log(3);
-    let boxPElem = item3.children[0]
-    let pElem = item3.children[0].children[0]
-    let boxDate = item3.children[1].children[0]
 
     if (!item3.classList.contains("box-big")) {
-
-        item3.insertAdjacentHTML("afterbegin" , '<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="icon-svg-2"><path fill-rule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clip-rule="evenodd" /></svg></span>')
-        item3.classList.add("box-big")
-        item3.classList.remove("item")
-        
-        boxPElem.classList.add("cantain-text-box1")
-        boxPElem.classList.remove("cantain-text")
-        boxPElem.insertAdjacentHTML("afterend" , '<span class="author">Jason Keller</span>')
-    
-        pElem.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit,"
-    
-        boxDate.classList.add("date-box1") 
-        boxDate.classList.remove("date") 
-        
-        boxBig.classList.add("item")
-        boxBig.classList.remove("box-big")
-        if (boxBig.childElementCount === 4) {            
-            boxBig.children[0].remove()
-            boxBig.children[1].remove()
-        }
-        cantainTextBox1.classList.add("cantain-text")
-        cantainTextBox1.classList.remove("cantain-text-box1")
-        cantainTextBox1PElem.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
-        dateBox1.classList.add("date")
-        dateBox1.classList.remove("date-box1")
-
+        addBoxBigToItem(item3)
         if (item2.classList.contains("box-big")) {
-            item2.classList.add("item")
-            item2.classList.remove("box-big")
-            item2.style.backgroundPositionY = "-105px"
-            item2.style.backgroundBlendMode = "overlay"
-            
-            item2.children[0].remove()
-            item2.children[1].remove()
-            
-            item2.children[0].classList.remove("cantain-text-box1")
-            item2.children[0].classList.add("cantain-text")
-            
-            item2.children[0].children[0].innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
-            
-            item2.children[1].children[0].classList.add("date") 
-            item2.children[1].children[0].classList.remove("date-box1")
+            addItem(item2)
         } else if (item1.classList.contains("box-big")) {
-            // changeClassItem1()
-            item1.classList.add("item")
-            item1.classList.remove("box-big")
-            
-            item1.children[0].remove()
-            item1.children[1].remove()
-            
-            item1.children[0].classList.remove("cantain-text-box1")
-            item1.children[0].classList.add("cantain-text")
-            
-            item1.children[0].children[0].innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
-            
-            item1.children[1].children[0].classList.add("date") 
-            item1.children[1].children[0].classList.remove("date-box1")
+            addItem(item1)
         } else {
-            console.log(3);
             boxBig.style.gridColumn = "2 / 3"
         }
         
@@ -441,15 +167,6 @@ function changeClassItem3 () {
 }
 
 function iconBoxBig () {
-    console.log(100);
-
-    isClickIcon = true
-    if (isBoxbig) {
-        isBoxbig = false
-    } else {
-        isBoxbig = true    
-    }
-    
 
     boxBig.classList.replace("box-big" , "item")
     
@@ -466,8 +183,12 @@ function iconBoxBig () {
     dateBox1.classList.add("date")
     dateBox1.classList.remove("date-box1")
 
-    author[0].remove()    
-    iconBack[0].parentElement.remove()
+    if (author[0] != undefined) {
+        author[0].remove() 
+    }
+    if (iconBack[0] != undefined) {
+        iconBack[0].parentElement.remove()
+    }    
 }
 
 function changePositon() {
@@ -503,9 +224,7 @@ function responseChefz () {
 }
 responseChefz()
 
-// ---------------------------------------
-
-window.addEventListener("scroll" , (event) => {
+function scrollAnimation () {
     console.log(scrollY);
     if (window.innerWidth >= 1200) {
 
@@ -654,22 +373,20 @@ window.addEventListener("scroll" , (event) => {
     else {
         console.log("res");
     }
-})
+}
 
-bars.addEventListener("click" , () => {
+function clickBar () {
     sideMenu.style.transform = "translateX(0)"
     sideMenu.style.transition = "2s ease-out 0.2s"
-})
+}
 
-buttonGrey.forEach((grey) => {
-    grey.addEventListener("click" , (event) => {
-        event.preventDefault()
-        modal.style.display = "flex"
-    })
-})
+function btnGreyDishes(event) {
+    event.preventDefault()
+    modal.style.display = "flex"
+}
 
-arrowInsta.addEventListener("click" , () => {
-    let a = boxImageInsta.remove()
+function arrowBoxInsta() {
+    boxImageInsta.remove()
     boxTitleInsta.insertAdjacentHTML("afterend" , `<div class="fot fade">
                   <span>26 Jun at 16:20 pm</span>
                   <h6>
@@ -679,9 +396,88 @@ arrowInsta.addEventListener("click" , () => {
                     consectetur adipiscing
                   </h6>
                   <!-- <p>@DennisFerguson</p> -->
-                </div>`)
+                </div>`
+    )
+}
+
+function addBoxBig() {
+    boxBig.classList.add("box-big")
+    boxBig.classList.remove("item")
+    cantainTextBox1.classList.add("cantain-text-box1")
+    cantainTextBox1.classList.remove("cantain-text")
+    cantainTextBox1PElem.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit,"
+    dateBox1.classList.add("date-box1")
+    dateBox1.classList.remove("date")
+    boxBig.style.backgroundPositionX = '-112px'
+    boxBig.style.backgroundPositionY = '0'
+    cantainFooterLeft.style.removeProperty("width")
+    boxBig.style.gridColumn = "1 / 2"
+    if (boxBig.childElementCount == 2) {
+        boxBig.insertAdjacentHTML("afterbegin" , '<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="icon-svg-2"><path fill-rule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clip-rule="evenodd" /></svg></span>')     
+        cantainTextBox1.insertAdjacentHTML("afterend" , '<span class="author">Jason Keller</span>')                
+    }
+}
+
+function addItem(item) {
+    item.classList.add("item")
+    item.classList.remove("box-big")
+
+    item.children[0].remove()
+    item.children[1].remove()
+
+    item.children[0].classList.remove("cantain-text-box1")
+    item.children[0].classList.add("cantain-text")
+
+    item.children[0].children[0].innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
+
+    item.children[1].children[0].classList.add("date") 
+    item.children[1].children[0].classList.remove("date-box1")
+
+    item.style.backgroundPositionY = "-105px"
+    item.style.backgroundBlendMode = "overlay"
+}
+
+function addBoxBigToItem(item) {
+    let boxPElem = item.children[0]
+    let pElem = item.children[0].children[0]
+    let boxDate = item.children[1].children[0]
+
+    item.insertAdjacentHTML("afterbegin" , '<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="icon-svg-2"><path fill-rule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clip-rule="evenodd" /></svg></span>')
+    item.classList.add("box-big")
+    item.classList.remove("item")
+    item.style.backgroundPositionY = "0"
+    item.style.backgroundBlendMode = "normal"
     
-})
+    boxPElem.classList.add("cantain-text-box1")
+    boxPElem.classList.remove("cantain-text")
+    boxPElem.insertAdjacentHTML("afterend" , '<span class="author">Jason Keller</span>')
+
+    pElem.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit,"
+
+    boxDate.classList.add("date-box1") 
+    boxDate.classList.remove("date") 
+    
+    boxBig.classList.add("item")
+    boxBig.classList.remove("box-big")
+    if (boxBig.childElementCount === 4) {            
+        boxBig.children[0].remove()
+        boxBig.children[1].remove()
+    }
+    cantainTextBox1.classList.add("cantain-text")
+    cantainTextBox1.classList.remove("cantain-text-box1")
+    cantainTextBox1PElem.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
+    dateBox1.classList.add("date")
+    dateBox1.classList.remove("date-box1")
+}
+
+// ---------------------------------------
+buttonGrey.forEach((grey) => grey.addEventListener("click" , (event) => btnGreyDishes(event)))
+
+window.addEventListener("scroll" , scrollAnimation)
+
+bars.addEventListener("click" , clickBar)
+
+arrowInsta.addEventListener("click" , arrowBoxInsta)
 
 modal.addEventListener("click" , () => modal.style.display = "none")
 
